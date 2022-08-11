@@ -22,6 +22,7 @@ class Task2
     public function validDate(string $date): bool
     {
         $dateObj = date_create_from_format('d.m.Y', $date);
+
         return $dateObj && $dateObj->format('d.m.Y') === $date;
     }
 }
