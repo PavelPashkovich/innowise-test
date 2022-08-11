@@ -19,6 +19,7 @@ class Task9
                 $result[] = $arr[$i] . ' + ' . $arr[$i + 1] . ' + ' . $arr[$i + 2] . ' = ' . $number;
             }
         }
+
         return $result;
     }
 }
