@@ -17,48 +17,56 @@ class Task12
     public function add(): object
     {
         $this->result = $this->a + $this->b;
+
         return $this;
     }
 
     public function subtract(): object
     {
         $this->result = $this->a - $this->b;
+
         return $this;
     }
 
     public function multiply(): object
     {
         $this->result = $this->a * $this->b;
+
         return $this;
     }
 
     public function divide(): object
     {
         $this->result = $this->a / $this->b;
+
         return $this;
     }
 
     public function addX(float $x): object
     {
         $this->result += $x;
+
         return $this;
     }
 
     public function subtractX(float $x): object
     {
         $this->result -= $x;
+
         return $this;
     }
 
     public function multiplyBy(float $x): object
     {
         $this->result *= $x;
+
         return $this;
     }
 
     public function divideBy(float $x): object
     {
         $this->result /= $x;
+
         return $this;
     }
 
