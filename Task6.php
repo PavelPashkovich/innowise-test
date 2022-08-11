@@ -28,6 +28,7 @@ class Task6
             }
             $fromDate = strtotime('+1 Month', $fromDate);
         }
+
         return $weekdayCounter;
     }
 }
