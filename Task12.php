@@ -45,7 +45,7 @@ class Task12
         return $this;
     }
 
-    public function addX(float $x): object
+    public function addBY(float $x): object
     {
         $this->result += $x;
 
