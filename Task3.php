@@ -4,8 +4,11 @@ namespace src;
 
 class Task3
 {
-    public function main(int $number): int
+    public function main($number): int
     {
+        if (gettype($number) !== 'integer') {
+            throw new \InvalidArgumentException('function accepts integers only. Input was: ' . $number);
+        }
         if ($number <= 1) {
             throw new \InvalidArgumentException('function accepts numbers > 1 only. Input was: ' . $number);
         }
