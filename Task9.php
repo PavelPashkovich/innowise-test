@@ -6,10 +6,16 @@ class Task9
 {
     public function main(array $arr, int $number): array
     {
+        if (count($arr) < 3) {
+            throw new \InvalidArgumentException('first function argument should consist of min 3 numbers');
+        }
         foreach ($arr as $elem) {
-            if ($elem !== (int) $elem) {
-                throw new \InvalidArgumentException('first function argument should be an array of numbers only');
+            if (($elem !== (int) $elem) || $elem < 0) {
+                throw new \InvalidArgumentException('first function argument should be an array of numbers >= 0');
             }
+        }
+        if ($number <= 0) {
+            throw new \InvalidArgumentException('second function argument should be an integer > 0');
         }
 
         $result = [];
