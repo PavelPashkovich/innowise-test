@@ -37,6 +37,9 @@ class Task12
 
     public function divide(): object
     {
+        if ($this->b == 0) {
+            throw new \InvalidArgumentException('Division by zero');
+        }
         $this->result = $this->a / $this->b;
 
         return $this;
@@ -49,7 +52,7 @@ class Task12
         return $this;
     }
 
-    public function subtractX(float $x): object
+    public function subtractBy(float $x): object
     {
         $this->result -= $x;
 
@@ -65,6 +68,9 @@ class Task12
 
     public function divideBy(float $x): object
     {
+        if ($x == 0) {
+            throw new \InvalidArgumentException('Division by zero');
+        }
         $this->result /= $x;
 
         return $this;
